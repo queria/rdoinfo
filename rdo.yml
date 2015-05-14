@@ -284,6 +284,15 @@ packages:
   distro-branch: rpm-master
   maintainers:
   - jruzicka@redhat.com
+- project: tempest
+  name: openstack-tempest
+  upstream: git://github.com/redhat-openstack/%(project)s
+  source-branch: master
+  master-distgit: git://github.com/openstack-packages/%(project)s
+  distro-branch: rpm-master
+  maintainers:
+  - slinaber@redhat.com
+  - psedlak@redhat.com
 # The openstack clients
 - project: keystoneclient
   conf: client
@@ -457,3 +466,13 @@ packages:
   distro-branch: rpm-master
   maintainers:
   - jslagle@redhat.com
+- project: tempest-lib
+  name: python-%(project)s
+  upstream: git://git.openstack.org/openstack/%(project)s
+  source-branch: master
+  #distgit: ssh://pkgs.fedoraproject.org/python-%(project)s.git
+  master-distgit: git://github.com/openstack-packages/python-%(project)s
+  distro-branch: rpm-master
+  maintainers:
+  - slinaber@redhat.com
+  - psedlak@redhat.com
